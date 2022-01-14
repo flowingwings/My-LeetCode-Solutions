@@ -1,0 +1,2 @@
+For every problem, I set up a folder to store my own solution and explanation. I will put the link to the problem in the head of my solution as comments. 
+Caution: my explanation is usually just some additional notes for the official solution on LeetCode. 
