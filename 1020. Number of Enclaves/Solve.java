@@ -80,3 +80,51 @@ class Solution1 {
     }
     
 }
+
+class Solution2{
+    public int numEnclaves(int[][] grid){
+        // Removed array able, because it's unecessary.
+        int m = grid.length;
+        int n = grid[0].length;
+        boolean[][] visited = new boolean[m][n];
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                visited[i][j] = false;
+            }
+        }
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(grid[i][j] == 1 && !visited[i][j] &&
+                 (i == 0 || i == m - 1 || j == 0 || j == n - 1)){
+                    dfs(grid, visited, i, j, m, n);
+                }
+            }
+        }
+        int ans = 0;
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(grid[i][j] == 1 && !visited[i][j]){
+                    ans ++;
+                }
+            }
+        }
+        return ans;
+    }
+    int[] dx = {1, 0, -1, 0};
+    int[] dy = {0, 1, 0, -1};
+    void dfs(int[][] grid, boolean[][] visited, int x, int y, int m, int n){
+        visited[x][y] = true;
+        for(int i=0; i<4; i++){
+            int newx = x + dx[i];
+            int newy = y + dy[i];
+            if(
+                newx < 0 || newy < 0 || newx >= m || newy >= n || 
+                grid[newx][newy] == 0 || visited[newx][newy]
+                ){
+                continue;
+            }
+            dfs(grid, visited, newx, newy, m, n);
+        }
+        return;
+    }
+}
