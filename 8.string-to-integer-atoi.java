@@ -1,5 +1,3 @@
-import javax.lang.model.element.Element;
-import javax.lang.model.util.ElementScanner6;
 
 // @lc app=leetcode id=8 lang=java
 // @lc code=start
