@@ -17,10 +17,10 @@ class Solution {
         while(l<r){
             int mid=(l+r)/2;
             if((nums[0]>nums[mid])^(nums[0]>target)^(target>nums[mid])){
-                r=mid;
+                l=mid+1;
             }
             else{
-                l=mid+1;
+                r=mid;
             }
         }
         return l==r&&nums[l]==target?l:-1;
