@@ -17,6 +17,13 @@ class Solution {
             }
         }
         return dp[n-1];
+        // A better answer using combination number.
+        // long ans = 1;
+        // for (int x = n, y = 1; y < m; ++x, ++y) {
+        //     ans = ans * x / y;
+        // }
+        // return (int) ans;
+
     }
 }
 // @lc code=end
