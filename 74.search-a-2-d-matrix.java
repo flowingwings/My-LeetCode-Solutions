@@ -5,9 +5,14 @@
  */
 
 // @lc code=start
+
+// Binary search.
+// Another solution: binary search first element of every row 
+// to find the only row that probably contains target, 
+// then binary search in that row.
+// Would that be faster?
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        // boolean ans = true;
         int row = matrix.length, col = matrix[0].length;
         int left = 0, right = row*col-1;
         int pivot = 0, temp = 0;
