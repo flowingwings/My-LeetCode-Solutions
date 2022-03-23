@@ -10,7 +10,7 @@ import java.util.List;
 // @lc code=start
 /**
  * Definition for a binary tree node.*/
-public class TreeNode {
+class TreeNode {
     int val;
      TreeNode left;
       TreeNode right;
