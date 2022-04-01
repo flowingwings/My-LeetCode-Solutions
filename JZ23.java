@@ -8,7 +8,7 @@ class ListNode {
         this.val = val;
     }
 }
-class Solution {
+class Solution23 {
     public ListNode EntryNodeOfLoop(ListNode pHead) {
         ListNode slow = pHead;
         ListNode fast = pHead;

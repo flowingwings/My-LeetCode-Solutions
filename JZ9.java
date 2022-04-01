@@ -1,7 +1,7 @@
 // https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a
 
 import java.util.ArrayList;
-class Solution {
+class Solution9 {
     public ArrayList<Integer> printMatrix(int [][] matrix) {
         ArrayList<Integer> ans = new ArrayList<>();
         int m = matrix.length;
